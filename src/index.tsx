@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Home from './pages/home/Home';
 import reportWebVitals from './reportWebVitals';
 import './fonts/Montserrat/Montserrat-Regular.ttf';
 
+import { Router } from './Router';
+
 ReactDOM.render(
   <React.StrictMode>
-    <Home />
+    <Router />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,7 +1,6 @@
-import React from 'react';
-import './Home.css';
+import './style.css';
 
-function Home() {
+export const Home = () => {
   return (
     <div className="App">
       <header className="App-header">
@@ -10,5 +9,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;

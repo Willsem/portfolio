@@ -4,11 +4,11 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import './fonts/Montserrat/Montserrat-Regular.ttf';
 
-import { Router } from './Router';
+import { AppRouter } from './Router';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router />
+    <AppRouter />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,5 +1,5 @@
 import {
-  BrowserRouter,
+  BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
@@ -12,35 +12,20 @@ import { Work } from './views/work/Work';
 import { Projects } from './views/projects/Projects';
 import { Contacts } from './views/contacts/Contacts';
 
-export const Router = () => {
+export const AppRouter = () => {
   return (
-   <BrowserRouter>
-      <Menu />
-      <Switch>
-        <Route path="/">
-          <Home />
-        </Route>
-
-        <Route path="/skills">
-          <Skills />
-        </Route>
-
-        <Route path="/education">
-          <Education />
-        </Route>
-
-        <Route path="/work">
-          <Work />
-        </Route>
-
-        <Route path="/projects">
-          <Projects />
-        </Route>
-
-        <Route path="/contacts">
-          <Contacts />
-        </Route>
-      </Switch>
-    </BrowserRouter>
+    <Router>
+      <div>
+        <Menu />
+        <Switch>
+          <Route exact path="/" component={Home}></Route>
+          <Route exact path="/skills" component={Skills}></Route>
+          <Route exact path="/education" component={Education}></Route>
+          <Route exact path="/work" component={Work}></Route>
+          <Route exact path="/projects" component={Projects}></Route>
+          <Route exact path="/contacts" component={Contacts}></Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }

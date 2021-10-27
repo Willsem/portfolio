@@ -16,6 +16,12 @@ export const Menu = () => {
         <li>
           <Link to="/work">Work</Link>
         </li>
+        <li>
+          <Link to="/projects">Projects</Link>
+        </li>
+        <li>
+          <Link to="/contacts">Contact me</Link>
+        </li>
       </ul>
     </nav>
   );

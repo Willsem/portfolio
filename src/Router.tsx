@@ -16,7 +16,6 @@ export const AppRouter = () => {
   return (
     <Router>
       <div>
-        <Menu />
         <Switch>
           <Route exact path="/" component={Home}></Route>
           <Route exact path="/skills" component={Skills}></Route>
@@ -25,6 +24,7 @@ export const AppRouter = () => {
           <Route exact path="/projects" component={Projects}></Route>
           <Route exact path="/contacts" component={Contacts}></Route>
         </Switch>
+        <Menu />
       </div>
     </Router>
   );

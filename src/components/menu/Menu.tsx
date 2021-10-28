@@ -1,26 +1,54 @@
 import { Link } from 'react-router-dom';
+import {
+  FiHome,
+  FiCpu,
+  FiBook,
+  FiBriefcase,
+  FiGithub,
+  FiUser,
+} from 'react-icons/fi';
+
+import './style.css';
 
 export const Menu = () => {
   return(
     <nav>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">
+            <FiHome />
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="/skills">Skills</Link>
+          <Link to="/skills">
+            <FiCpu />
+            Skills
+          </Link>
         </li>
         <li>
-          <Link to="/education">Education</Link>
+          <Link to="/education">
+            <FiBook />
+            Education
+          </Link>
         </li>
         <li>
-          <Link to="/work">Work</Link>
+          <Link to="/work">
+            <FiBriefcase />
+            Work
+          </Link>
         </li>
         <li>
-          <Link to="/projects">Projects</Link>
+          <Link to="/projects">
+            <FiGithub />
+            Projects
+          </Link>
         </li>
         <li>
-          <Link to="/contacts">Contact me</Link>
+          <Link to="/contacts">
+            <FiUser />
+            Contact me
+          </Link>
         </li>
       </ul>
     </nav>

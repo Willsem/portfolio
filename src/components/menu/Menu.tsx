@@ -7,6 +7,7 @@ import {
   FiGithub,
   FiUser,
 } from 'react-icons/fi';
+import MediaQuery from 'react-responsive';
 
 import './style.css';
 
@@ -15,39 +16,51 @@ export const Menu = () => {
     <nav>
       <ul>
         <li>
-          <Link to="/">
-            <FiHome />
-            Home
+          <Link to="/" className="link">
+            <FiHome className="icon" />
+            <MediaQuery query="(min-device-width: 600px)">
+              Home
+            </MediaQuery>
           </Link>
         </li>
         <li>
-          <Link to="/skills">
-            <FiCpu />
-            Skills
+          <Link to="/skills" className="link">
+            <FiCpu className="icon" />
+            <MediaQuery query="(min-device-width: 600px)">
+              Skills
+            </MediaQuery>
           </Link>
         </li>
         <li>
-          <Link to="/education">
-            <FiBook />
-            Education
+          <Link to="/education" className="link">
+            <FiBook className="icon" />
+            <MediaQuery query="(min-device-width: 600px)">
+              Education
+            </MediaQuery>
           </Link>
         </li>
         <li>
-          <Link to="/work">
-            <FiBriefcase />
-            Work
+          <Link to="/work" className="link">
+            <FiBriefcase className="icon" />
+            <MediaQuery query="(min-device-width: 600px)">
+              Work
+            </MediaQuery>
           </Link>
         </li>
         <li>
-          <Link to="/projects">
-            <FiGithub />
-            Projects
+          <Link to="/projects" className="link">
+            <FiGithub className="icon" />
+            <MediaQuery query="(min-device-width: 600px)">
+              Projects
+            </MediaQuery>
           </Link>
         </li>
         <li>
-          <Link to="/contacts">
-            <FiUser />
-            Contact me
+          <Link to="/contacts" className="link">
+            <FiUser className="icon" />
+            <MediaQuery query="(min-device-width: 600px)">
+              Contact me
+            </MediaQuery>
           </Link>
         </li>
       </ul>

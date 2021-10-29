@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import {
   FiHome,
   FiCpu,
@@ -11,12 +11,17 @@ import MediaQuery from 'react-responsive';
 
 import './style.css';
 
+const GetPath = () => {
+  const location = useLocation();
+  return location.pathname;
+}
+
 export const Menu = () => {
   return(
     <nav>
       <ul>
         <li>
-          <Link to="/" className="link">
+          <Link to="/" className={'link' + (GetPath() === '/' ? ' current-link' : '')}>
             <FiHome className="icon" />
             <MediaQuery query="(min-device-width: 600px)">
               Home
@@ -24,7 +29,7 @@ export const Menu = () => {
           </Link>
         </li>
         <li>
-          <Link to="/skills" className="link">
+          <Link to="/skills" className={'link' + (GetPath() === '/skills' ? ' current-link' : '')}>
             <FiCpu className="icon" />
             <MediaQuery query="(min-device-width: 600px)">
               Skills
@@ -32,7 +37,7 @@ export const Menu = () => {
           </Link>
         </li>
         <li>
-          <Link to="/education" className="link">
+          <Link to="/education" className={'link' + (GetPath() === '/education' ? ' current-link' : '')}>
             <FiBook className="icon" />
             <MediaQuery query="(min-device-width: 600px)">
               Education
@@ -40,7 +45,7 @@ export const Menu = () => {
           </Link>
         </li>
         <li>
-          <Link to="/work" className="link">
+          <Link to="/work" className={'link' + (GetPath() === '/work' ? ' current-link' : '')}>
             <FiBriefcase className="icon" />
             <MediaQuery query="(min-device-width: 600px)">
               Work
@@ -48,7 +53,7 @@ export const Menu = () => {
           </Link>
         </li>
         <li>
-          <Link to="/projects" className="link">
+          <Link to="/projects" className={'link' + (GetPath() === '/projects' ? ' current-link' : '')}>
             <FiGithub className="icon" />
             <MediaQuery query="(min-device-width: 600px)">
               Projects
@@ -56,7 +61,7 @@ export const Menu = () => {
           </Link>
         </li>
         <li>
-          <Link to="/contacts" className="link">
+          <Link to="/contacts" className={'link' + (GetPath() === '/contacts' ? ' current-link' : '')}>
             <FiUser className="icon" />
             <MediaQuery query="(min-device-width: 600px)">
               Contact me

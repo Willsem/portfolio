@@ -1,4 +1,3 @@
-import { Link, useLocation } from 'react-router-dom';
 import {
   FiHome,
   FiCpu,
@@ -7,67 +6,21 @@ import {
   FiGithub,
   FiUser,
 } from 'react-icons/fi';
-import MediaQuery from 'react-responsive';
 
 import './style.css';
 
-const GetPath = () => {
-  const location = useLocation();
-  return location.pathname;
-}
+import { MenuElement } from '../menu-element/MenuElement';
 
 export const Menu = () => {
   return(
     <nav>
       <ul>
-        <li>
-          <Link to="/" className={'link' + (GetPath() === '/' ? ' current-link' : '')}>
-            <FiHome className="icon" />
-            <MediaQuery query="(min-device-width: 600px)">
-              Home
-            </MediaQuery>
-          </Link>
-        </li>
-        <li>
-          <Link to="/skills" className={'link' + (GetPath() === '/skills' ? ' current-link' : '')}>
-            <FiCpu className="icon" />
-            <MediaQuery query="(min-device-width: 600px)">
-              Skills
-            </MediaQuery>
-          </Link>
-        </li>
-        <li>
-          <Link to="/education" className={'link' + (GetPath() === '/education' ? ' current-link' : '')}>
-            <FiBook className="icon" />
-            <MediaQuery query="(min-device-width: 600px)">
-              Education
-            </MediaQuery>
-          </Link>
-        </li>
-        <li>
-          <Link to="/work" className={'link' + (GetPath() === '/work' ? ' current-link' : '')}>
-            <FiBriefcase className="icon" />
-            <MediaQuery query="(min-device-width: 600px)">
-              Work
-            </MediaQuery>
-          </Link>
-        </li>
-        <li>
-          <Link to="/projects" className={'link' + (GetPath() === '/projects' ? ' current-link' : '')}>
-            <FiGithub className="icon" />
-            <MediaQuery query="(min-device-width: 600px)">
-              Projects
-            </MediaQuery>
-          </Link>
-        </li>
-        <li>
-          <Link to="/contacts" className={'link' + (GetPath() === '/contacts' ? ' current-link' : '')}>
-            <FiUser className="icon" />
-            <MediaQuery query="(min-device-width: 600px)">
-              Contact me
-            </MediaQuery>
-          </Link>
-        </li>
+        <MenuElement Icon={FiHome} title="Home" path="/" />
+        <MenuElement Icon={FiCpu} title="Skills" path="/skills" />
+        <MenuElement Icon={FiBook} title="Education" path="/education" />
+        <MenuElement Icon={FiBriefcase} title="Work" path="/work" />
+        <MenuElement Icon={FiGithub} title="Projects" path="/projects" />
+        <MenuElement Icon={FiUser} title="Contact me" path="/contacts" />
       </ul>
     </nav>
   );

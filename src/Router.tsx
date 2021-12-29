@@ -1,8 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+import * as React from 'react';
 
 import { Menu } from './components/menu/Menu';
 import { Home } from './views/home/Home';
@@ -13,19 +9,21 @@ import { Projects } from './views/projects/Projects';
 import { Contacts } from './views/contacts/Contacts';
 
 export const AppRouter = () => {
+  const [tabValue, setTabValue] = React.useState(0);
+
   return (
-    <Router>
-      <div>
-        <Switch>
-          <Route exact path="/" component={Home}></Route>
-          <Route exact path="/skills" component={Skills}></Route>
-          <Route exact path="/education" component={Education}></Route>
-          <Route exact path="/work" component={Work}></Route>
-          <Route exact path="/projects" component={Projects}></Route>
-          <Route exact path="/contacts" component={Contacts}></Route>
-        </Switch>
-        <Menu />
-      </div>
-    </Router>
+    <div>
+      <Menu tabValue={tabValue} setTabValue={setTabValue}/>
+      {
+        {
+          0: <Home />,
+          1: <Skills />,
+          2: <Education />,
+          3: <Work />,
+          4: <Projects />,
+          5: <Contacts />,
+        }[tabValue]
+      }
+    </div>
   );
 }

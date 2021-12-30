@@ -1,0 +1,12 @@
+.card {
+  width: 200px;
+  display: inline-block;
+  background-color: #666;
+  vertical-align: center;
+  text-align: center;
+  margin: 10px;
+}
+
+.title, .avatar {
+  display: inline-block;
+}

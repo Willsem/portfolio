@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="app">
       <div className="app__container">
@@ -9,6 +9,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;

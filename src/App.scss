@@ -1,5 +1,12 @@
 .app {
+  width: 100vw;
+  height: 100vh;
+  background-color: #66b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   &__container {
-    font-size: 18px;
+    font-size: 160px;
   }
 }
